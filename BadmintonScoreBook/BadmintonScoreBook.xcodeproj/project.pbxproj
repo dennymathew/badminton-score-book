@@ -39,19 +39,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		EF1D88DC2ECCEC1C00461C58 /* Exceptions for "BadmintonScoreBook" folder in "BadmintonScoreBookTests" target */ = {
+		EF1D88EE2ECCF19D00461C58 /* Exceptions for "BadmintonScoreBook" folder in "BadmintonScoreBookTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"GoogleService-Info.plist",
 			);
 			target = EF1D88B72ECCE87400461C58 /* BadmintonScoreBookTests */;
-		};
-		EF1D88DD2ECCEC1C00461C58 /* Exceptions for "BadmintonScoreBook" folder in "BadmintonScoreBookUITests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"GoogleService-Info.plist",
-			);
-			target = EF1D88C12ECCE87400461C58 /* BadmintonScoreBookUITests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -59,8 +52,7 @@
 		EF1D88AD2ECCE87300461C58 /* BadmintonScoreBook */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				EF1D88DC2ECCEC1C00461C58 /* Exceptions for "BadmintonScoreBook" folder in "BadmintonScoreBookTests" target */,
-				EF1D88DD2ECCEC1C00461C58 /* Exceptions for "BadmintonScoreBook" folder in "BadmintonScoreBookUITests" target */,
+				EF1D88EE2ECCF19D00461C58 /* Exceptions for "BadmintonScoreBook" folder in "BadmintonScoreBookTests" target */,
 			);
 			path = BadmintonScoreBook;
 			sourceTree = "<group>";
