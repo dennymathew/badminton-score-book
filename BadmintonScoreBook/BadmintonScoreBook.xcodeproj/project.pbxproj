@@ -39,7 +39,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		EF1D88EE2ECCF19D00461C58 /* Exceptions for "BadmintonScoreBook" folder in "BadmintonScoreBookTests" target */ = {
+		EF1D88F52ECCF48300461C58 /* Exceptions for "BadmintonScoreBook" folder in "BadmintonScoreBookTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"GoogleService-Info.plist",
@@ -52,7 +52,7 @@
 		EF1D88AD2ECCE87300461C58 /* BadmintonScoreBook */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				EF1D88EE2ECCF19D00461C58 /* Exceptions for "BadmintonScoreBook" folder in "BadmintonScoreBookTests" target */,
+				EF1D88F52ECCF48300461C58 /* Exceptions for "BadmintonScoreBook" folder in "BadmintonScoreBookTests" target */,
 			);
 			path = BadmintonScoreBook;
 			sourceTree = "<group>";
