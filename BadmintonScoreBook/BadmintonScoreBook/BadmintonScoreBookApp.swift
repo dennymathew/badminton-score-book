@@ -1,26 +1,31 @@
+import FirebaseAuth
 import FirebaseCore
+import GoogleSignIn
 import SwiftUI
-
-class AppDelegate: NSObject, UIApplicationDelegate {
-    func application(
-        _ application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
-    ) -> Bool {
-        FirebaseApp.configure()
-        return true
-    }
-}
 
 @main
 struct BadmintonScoreBookApp: App {
-        // register app delegate for Firebase setup
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
-
+    @State private var isShowingLogin = false
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 ContentView()
+                    .onOpenURL { url in
+                        GIDSignIn.sharedInstance.handle(url)
+                    }
+                    .onAppear {
+                        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+                            if let user {
+                                print("USER LOGGED IN...", user.profile?.email ?? "EMAIL NOT AVAILABLE")
+                            } else {
+                                isShowingLogin = true
+                            }
+                        }
+                    }
+                    .fullScreenCover(isPresented: $isShowingLogin) {
+                        LoginView()
+                    }
+
             }
         }
     }

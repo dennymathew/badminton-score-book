@@ -13,6 +13,8 @@
 		EF1D88E62ECCECF900461C58 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = EF1D88E52ECCECF900461C58 /* FirebaseCrashlytics */; };
 		EF1D88E82ECCECF900461C58 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EF1D88E72ECCECF900461C58 /* FirebaseFirestore */; };
 		EF1D88EA2ECCECF900461C58 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = EF1D88E92ECCECF900461C58 /* FirebaseRemoteConfig */; };
+		EF1D88F82ECCF52E00461C58 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = EF1D88F72ECCF52E00461C58 /* GoogleSignIn */; };
+		EF1D88FA2ECCF52E00461C58 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EF1D88F92ECCF52E00461C58 /* GoogleSignInSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,12 +48,20 @@
 			);
 			target = EF1D88B72ECCE87400461C58 /* BadmintonScoreBookTests */;
 		};
+		EF1D88FC2ECCF63200461C58 /* Exceptions for "BadmintonScoreBook" folder in "BadmintonScoreBook" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = EF1D88AA2ECCE87300461C58 /* BadmintonScoreBook */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		EF1D88AD2ECCE87300461C58 /* BadmintonScoreBook */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				EF1D88FC2ECCF63200461C58 /* Exceptions for "BadmintonScoreBook" folder in "BadmintonScoreBook" target */,
 				EF1D88F52ECCF48300461C58 /* Exceptions for "BadmintonScoreBook" folder in "BadmintonScoreBookTests" target */,
 			);
 			path = BadmintonScoreBook;
@@ -77,9 +87,11 @@
 				EF1D88E02ECCECF900461C58 /* FirebaseAnalytics in Frameworks */,
 				EF1D88E62ECCECF900461C58 /* FirebaseCrashlytics in Frameworks */,
 				EF1D88E42ECCECF900461C58 /* FirebaseCore in Frameworks */,
+				EF1D88FA2ECCF52E00461C58 /* GoogleSignInSwift in Frameworks */,
 				EF1D88EA2ECCECF900461C58 /* FirebaseRemoteConfig in Frameworks */,
 				EF1D88E82ECCECF900461C58 /* FirebaseFirestore in Frameworks */,
 				EF1D88E22ECCECF900461C58 /* FirebaseAuth in Frameworks */,
+				EF1D88F82ECCF52E00461C58 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +158,8 @@
 				EF1D88E52ECCECF900461C58 /* FirebaseCrashlytics */,
 				EF1D88E72ECCECF900461C58 /* FirebaseFirestore */,
 				EF1D88E92ECCECF900461C58 /* FirebaseRemoteConfig */,
+				EF1D88F72ECCF52E00461C58 /* GoogleSignIn */,
+				EF1D88F92ECCF52E00461C58 /* GoogleSignInSwift */,
 			);
 			productName = BadmintonScoreBook;
 			productReference = EF1D88AB2ECCE87300461C58 /* BadmintonScoreBook.app */;
@@ -231,6 +245,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				EF1D88DE2ECCECF900461C58 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				EF1D88F62ECCF52E00461C58 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EF1D88AC2ECCE87300461C58 /* Products */;
@@ -364,6 +379,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -421,6 +437,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -437,6 +454,7 @@
 				DEVELOPMENT_TEAM = 9DENJD3M83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BadmintonScoreBook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -469,6 +487,7 @@
 				DEVELOPMENT_TEAM = 9DENJD3M83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BadmintonScoreBook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -625,6 +644,14 @@
 				minimumVersion = 12.6.0;
 			};
 		};
+		EF1D88F62ECCF52E00461C58 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -657,6 +684,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EF1D88DE2ECCECF900461C58 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfig;
+		};
+		EF1D88F72ECCF52E00461C58 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF1D88F62ECCF52E00461C58 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		EF1D88F92ECCF52E00461C58 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF1D88F62ECCF52E00461C58 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
