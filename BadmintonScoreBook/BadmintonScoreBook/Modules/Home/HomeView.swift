@@ -13,10 +13,13 @@ struct HomeView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: PlayerSelectionView(), isActive: $viewModel.navigateToPlayerSelection) {
+                NavigationLink(
+                    destination: PlayerSelectionView(),
+                    isActive: $viewModel.navigateToPlayerSelection
+                ) {
                     EmptyView()
                 }
-                
+
                 Button(action: {
                     viewModel.createNewGame()
                 }) {
@@ -29,8 +32,7 @@ struct HomeView: View {
                         .cornerRadius(10)
                 }
                 .padding(.horizontal)
-                
-                Spacer()
+                .padding(.vertical, 32)
             }
             .navigationBarHidden(false)
             .toolbar {
